@@ -1,0 +1,186 @@
+:root {
+    --background-color: #0d0d0d;
+    --background-second:#0d0d0d;
+    --background-third:#002244;
+    --primary-color: #f0f0f0;
+    --secondary-color: #e60000;
+    --nav-background: rgba(0, 0, 0, 0.8);
+    --nav-text-color: #f0f0f0;
+    --font-family: 'Roboto', sans-serif;
+    --clor-light: #0ef;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: rgb(7,2,94);
+    background: radial-gradient(circle, rgba(7,2,94,1) 0%, rgba(18,79,151,1) 49%, rgba(9,9,121,1) 100%);
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1;
+}
+.logo-container {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    margin: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px var(--clor-light);
+    background-color: var(--clor-light);
+    transition-duration: .5s;
+
+}
+.logo-container:hover{
+    color: var(--clor-light);
+    background-color:var(--background-color);
+}
+.logo-container a{
+    text-decoration: none;
+}
+.arc-reactor {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.logo-text {
+    color: var(--nav-text-color);
+    font-size: 1.2em;
+
+}
+div img{
+    object-fit: cover;
+    object-position: center;
+
+}
+nav ul {
+    list-style: none;
+    margin: 10px;
+    padding: 3px;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}
+
+nav ul li a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    font-size: 1.2vw;
+    padding: 5px 20px;
+    border: solid 1px var(--clor-light);
+    border-radius: 10px;
+    transition-duration: .5s;
+
+}
+
+nav ul li a:hover {
+    background-color: var(--clor-light);
+    color: var(--background-color);   
+    box-shadow: 0 0 20px var(--clor-light); 
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+.container .card{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40vw;
+    height: 60vh;
+    background: rgb(2,0,36);
+    background: rgb(7,2,94);
+    background: rgb(7,2,94);
+    background: linear-gradient(90deg, rgba(7,2,94,1) 0%, rgba(18,79,151,1) 49%, rgba(9,9,121,1) 100%);
+    transition-duration: 0.5s;
+}
+.container .card:hover{
+    height: 85vh;
+    border: dotted 2px var(--clor-light);
+    box-shadow: 0 0 20px var(--clor-light);
+    border-radius: 0px 80px;
+}
+.container .card .imgBox{
+    position: absolute;
+    top: 20px;
+    background-color: var(--background-second);
+    height: 300px;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.container .card:hover .imgBox{
+    top: -100px;
+    scale: 0.70;
+    border: dotted 2px var(--clor-light) ;
+    box-shadow: 0 0 20px var(--clor-light);
+}
+
+.container .card .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.container .card .content{
+   position: absolute; 
+   top: 325px;
+   width: 70%;
+   height: 45px;
+   overflow: hidden;
+   text-align: center;
+   transition: 0.5s;
+}
+.container .card:hover .content{
+    top: 200px;
+    height: 500px;
+}
+
+.container .card:hover .content h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--clor-light);
+
+}
+.container .card .content a{
+    position: relative;
+    top: 15px;
+    padding: 12px 25px;
+    background-color: var(--clor-light);
+    color: var(--background-third);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .5s;
+}
+.container .card .content a:hover{
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--clor-light);
+}

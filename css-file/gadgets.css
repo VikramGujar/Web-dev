@@ -1,0 +1,212 @@
+:root {
+    --background-color: #0d0d0d;
+    --background-second:#0d0d0d;
+    --primary-color: #f0f0f0;
+    --secondary-color: #e60000;
+    --nav-background: rgba(0, 0, 0, 0.8);
+    --nav-text-color: #f0f0f0;
+    --font-family: 'Roboto', sans-serif;
+    --clor-light: #0ef;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #002244;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1;
+}
+.logo-container {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    margin: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px var(--clor-light);
+    background-color: var(--clor-light);
+    transition-duration: .5s;
+
+}
+.logo-container:hover{
+    color: var(--clor-light);
+    background-color:var(--background-color);
+}
+.logo-container a{
+    text-decoration: none;
+}
+.arc-reactor {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.logo-text {
+    color: var(--nav-text-color);
+    font-size: 1.2em;
+
+}
+div img{
+    object-fit: cover;
+    object-position: center;
+
+}
+nav ul {
+    list-style: none;
+    margin: 10px;
+    padding: 3px;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}
+
+nav ul li a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    font-size: 1.2vw;
+    padding: 5px 20px;
+    border: solid 1px var(--clor-light);
+    border-radius: 10px;
+}
+
+nav ul li a:hover {
+    background-color: var(--clor-light);
+    color: var(--background-second);   
+    box-shadow: 0 0 20px var(--clor-light);  
+    transition-duration: .5s;
+}
+#wiki-tony{
+    bottom: 10;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 10px;
+    color: var(--background-color);
+    background-color: var(--clor-light);
+    box-shadow: 0 0 20px var(--clor-light);
+    
+
+}
+
+main {
+    padding: 20px;
+}
+
+.cap, .widow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.cap .img, .widow .bwi {
+    flex: 1;
+    padding: 20px;
+}
+
+.cap .text, .widow .bwt {
+    flex: 2;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 1.3s ease;
+}
+img:hover{
+    box-shadow: 0 0 20px var(--clor-light);
+    transition-duration: .5s;
+
+}
+img.animate-image {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.text h2, .bwt h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color:var(--clor-light);
+}
+
+.text p, .bwt p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.text p a, .bwt p a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.text p a:hover, .bwt p a:hover {
+    text-decoration: underline;
+}
+
+.animate-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+img {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 1.3s ease-in-out;
+}
+
+.text, .bwt {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 1.3s ease-in-out;
+}
+
+.animate-image {
+    animation: slideIn 1.3s forwards;
+}
+
+.animate-text {
+    animation: slideIn 1.3s forwards;
+}
+
+body.loaded .tony-photo {
+    transform: translateX(0%);
+}
+.cap img{
+    border: 2px dashed var(--clor-light);
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+.widow img{
+    border: 2px dashed var(--clor-light);
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+}
